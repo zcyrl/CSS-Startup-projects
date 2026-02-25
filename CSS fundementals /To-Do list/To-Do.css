@@ -1,0 +1,145 @@
+body {
+  background: #c9ae6dd2;
+  font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  padding-top: 40px;
+}
+
+/* MAIN LIST CONTAINER */
+
+.todo-list {
+  background: #c4dc8f;
+  padding: 20px;
+  border-radius: 14px;
+  width: 300px;
+  box-shadow: 0 0 25px rgba(187, 237, 237, 0.685);
+  list-style: none;
+}
+
+/* EACH TASK */
+
+.todo-list li {
+  margin-bottom: 18px;
+  position: relative;
+}
+
+/* HIDE REAL CHECKBOX */
+
+.todo-list input {
+  display: none;
+}
+
+/* LABEL STYLE */
+
+.todo-list label {
+  display: block;
+  padding: 12px 12px 12px 45px;
+  background: #87ace0;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+/* CUSTOM CHECKBOX CIRCLE */
+
+.todo-list label::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 2px solid #38bdf8;
+  border-radius: 50%;
+  position: absolute;
+  left: 12px;
+  top: 12px;
+  transition: 0.3s;
+}
+
+/* CHECKED STATE */
+
+.todo-list input:checked + label {
+  background: #22c55e;
+  text-decoration: line-through;
+  color: #022c22;
+}
+
+/* CHECKED CIRCLE */
+
+.todo-list input:checked + label::before {
+  background: hwb(166 39% 13%);
+  border-color: rgb(90, 224, 193);
+}
+
+/* SUB TASKS HIDDEN */
+
+.sub-item {
+  list-style: none;
+  margin-top: 6px;
+  margin-left: 25px;
+  max-height: 0;
+  overflow: hidden;
+  transition: 0.4s ease;
+}
+
+/* SHOW SUB TASKS WHEN CHECKED */
+
+.todo-list input:checked + label + .sub-item {
+  max-height: 100px;
+}
+
+/* LINKS */
+
+.sub-item-link {
+  text-decoration: none;
+  display: block;
+  padding: 6px;
+  transition: 0.3s;
+}
+
+/* STATES */
+
+.sub-item-link:link {
+  color: #38bdf8;
+}
+
+.sub-item-link:hover {
+  color: #facc15;
+}
+
+.sub-item-link:active {
+  color: #ef4444;
+}
+
+.sub-item-link:visited {
+  color: #a78bfa;
+}
+
+.sub-item-link:focus {
+  outline: 2px solid white;
+}
+
+a {
+    text-decoration: none;
+    color: #007bff;
+}
+
+a:link {
+    color: #007bff;
+}
+
+a:hover {
+    color: #5100b3;
+}
+
+a:active {
+    color: #b300a7;
+}
+
+a:visited {
+    color: #ff0000;
+}
+
+a:focus {
+    color: #66ff00;
+}
