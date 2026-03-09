@@ -64,7 +64,7 @@ section p {
   line-height: 1.5;
   color: #cbd5e1;
   display: flex;
-  flex-wrap: nowrap
+  flex-wrap: nowrap 
 }
 
 section h2 {
